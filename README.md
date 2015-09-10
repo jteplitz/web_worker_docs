@@ -1,6 +1,8 @@
 # WebWorkers in Angular 2: Documentation
 **Note** This file is identical to the [one in the angular repository](https://github.com/angular/angular/blob/master/modules/angular2/docs/web_workers/web_workers.md)
 But that URL may change, so I've duplicated it here just in case.
+
+
 Angular 2 includes native support for writing applications which live in a
 WebWorker. This document describes how to write applications that take advantage
 of this feature.
