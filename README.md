@@ -1,7 +1,6 @@
 # WebWorkers in Angular 2: Documentation
 **Note** This file is identical to the [one in the angular repository](https://github.com/angular/angular/blob/master/modules/angular2/docs/web_workers/web_workers.md)
 But that URL may change, so I've duplicated it here just in case.
-
 Angular 2 includes native support for writing applications which live in a
 WebWorker. This document describes how to write applications that take advantage
 of this feature.
@@ -42,7 +41,7 @@ To bootstrap Hello World in a WebWorker we do the following in TypeScript
 ```TypeScript
 // index.js
 import {bootstrap} from "angular2/web_worker/ui";
-bootstrap(loader.js);
+bootstrap("loader.js");
 ```
 ```JavaScript
 // loader.js
@@ -219,7 +218,7 @@ import {MessageBus} from 'angular2/web_worker/worker';
 @View({...})
 export class MyComponent {
   constructor (bus: MessageBus) {
-    bus.initChannel("My CustomChannel");
+    bus.initChannel("My Custom Channel");
   }
 }
 ```
@@ -398,8 +397,8 @@ an operation be performed and may want to receive the result.
 
 ### Using the MessageBroker In Your Application
 To use MessageBrokers in your application you must initialize both a `ClientMessageBroker` and a
-`ServiceMessageBroker` on the same channel. You can then register methods that the `ServiceMessageBroker` should
-listen the instruct the `ClientMessageBroker` to run those methods. Below is a lightweight example of using
+`ServiceMessageBroker` on the same channel. You can then register methods with the `ServiceMessageBroker` and
+instruct the `ClientMessageBroker` to run those methods. Below is a lightweight example of using
 MessageBrokers in an application. For a more complete example, check out the `WebWorkerRenderer` and
 `MessageBasedRenderer` inside the Angular WebWorker code.
 
